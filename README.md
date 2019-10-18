@@ -1,4 +1,4 @@
-# i-exceed-training
+# i-exceed-training-and-programming-questions
 
 ## This repository contains all the programs and execises done during i-exceed training 
 
