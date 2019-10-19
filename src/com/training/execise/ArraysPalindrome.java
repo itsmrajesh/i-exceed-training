@@ -3,7 +3,7 @@ package com.training.execise;
 public class ArraysPalindrome {
 
 	public static void main(String[] args) {
-		int arr[] = { 5, 15, 25, 25, 15, 50 };
+		int arr[] = { 5, 15, 25, 25, 15, 5 };
 		int len = arr.length;
 		boolean isPal = true;
 		for (int i = 0; i < arr.length / 2; i++) {

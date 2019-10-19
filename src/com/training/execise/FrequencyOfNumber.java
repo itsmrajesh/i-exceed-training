@@ -1,6 +1,6 @@
 package com.training.execise;
 
-public class NumberFrequenncy {
+public class FrequencyOfNumber {
 
 	public static void main(String[] args) {
 		int arr[] = { 25, 5, 4, 22, 0, 24, 36, 85, 25, 41, 52, 25 };

@@ -1,11 +1,12 @@
 package com.training.execise;
 
 public class FindIndexOfElement {
+	static int len;
 
 	public static void main(String[] args) {
 		int arr[] = { 10, 20, 30, 40, 50, 100, 70, 80, 100, 60 };
 		int ele = 100;// Integer.parseInt(args[0]);
-		int len = arr.length;
+		len = arr.length;
 		int i = 0, found = -1;
 		for (int e : arr) {
 			if (e == ele) {
@@ -14,14 +15,14 @@ public class FindIndexOfElement {
 		}
 		for (; i < len; i++)
 			if (arr[i] == ele)
-				printPOS(i, len);
+				printPOS(i);
 
 		if (found > 0) {
 			System.out.println("Found Mulitple times");
 		}
 	}
 
-	private static void printPOS(int i, int len) {
+	private static void printPOS(int i) {
 		if (i == 0)
 			System.out.println("Found at starting");
 		else if (i == len - 1)
