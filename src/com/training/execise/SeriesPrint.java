@@ -6,7 +6,7 @@ public class SeriesPrint {
 		int n = 10;
 		int a = 0;
 		for (int i = 1; i < n; i++) {
-			// System.out.print(a+" ");
+			 System.out.print(a+" ");
 			for (int j = 0; j < i; j++) {
 				a++;
 			}
