@@ -1,4 +1,4 @@
-package com.training.execise.overloading;
+package com.training.execise.overloading.loan;
 
 public class HomeLoan {
 	int Loanamount;
