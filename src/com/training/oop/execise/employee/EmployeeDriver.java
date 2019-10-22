@@ -24,10 +24,10 @@ public class EmployeeDriver {
 		Employee[] empArr = { emp1, emp2, emp3, emp4, emp5 };
 
 		double maxBudget = 0, budget;
-		Employee emp = null;
+		Employee emp = empArr[0];
 		// finding highest budget
 		for (int i = 0; i < empArr.length; i++) {
-			budget = empArr[i].getProject().getBudget();
+			budget = empArr[i].getProject().getBudget();  // getting budget from employee object
 			if (budget > maxBudget) {
 				maxBudget = budget;
 				emp = empArr[i];

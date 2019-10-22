@@ -6,7 +6,10 @@ public class HPLaptopDriver {
 		Laptop hpLap = new HPLaptop();
 		hpLap.swtichOff();
 		hpLap.swtichOn();
-		hpLap.welcome();
+		//hpLap.welcome();
+		hpLap = new DellLaptop();
+		hpLap.swtichOn();
+		hpLap.swtichOff();
 	}
 
 }

@@ -1,7 +1,7 @@
 package com.training.oop.abstraction;
 
 public abstract class Laptop {
-	 abstract void swtichOn();
+	abstract void swtichOn();
 
 	abstract void swtichOff();
 

@@ -9,7 +9,7 @@ public class ConnectDB {
 	public static void main(String[] args) {
 		String url = "jdbc:sqlite:C:/sqlite/ncet.db"; // DB Location
 		try {
-			Connection con = DriverManager.getConnection(url);
+			Connection con = DriverManager.getConnection(url); // connectin to DB
 			System.out.println("Connection success");
 		} catch (SQLException e) {
 			System.out.println("Something went wrong");
