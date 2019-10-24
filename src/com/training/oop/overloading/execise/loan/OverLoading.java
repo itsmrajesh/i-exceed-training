@@ -1,4 +1,4 @@
-package com.training.execise.overloading.loan;
+package com.training.oop.overloading.execise.loan;
 
 public class OverLoading {
 
