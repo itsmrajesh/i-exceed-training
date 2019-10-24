@@ -1,0 +1,9 @@
+sqlite3 demo.db
+
+create table students(id int,name text);
+
+insert into students values(101,'rajesh');
+insert into students values(102,'mrudulla');
+insert into students values(103,'achal');
+
+select * from students;

@@ -6,7 +6,7 @@ public class ConnectMySQLDB {
 	private Connection con;
 	private Statement stmt;
 	private PreparedStatement pstmt;
-	private ResultSet rs;
+	private static ResultSet rs;
 
 	static {
 		try {
@@ -18,7 +18,7 @@ public class ConnectMySQLDB {
 
 	public Connection getConnection() {
 		try {
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/iexceed", "rajesh", "mysql123");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbdemo", "rajesh", "mysql123");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -28,17 +28,16 @@ public class ConnectMySQLDB {
 	public static void main(String[] args) throws SQLException {
 		ConnectMySQLDB db = new ConnectMySQLDB();
 		Connection con = db.getConnection();
-		Statement st = con.createStatement();
-		String sql = "select * from emp";
-		ResultSet rs = st.executeQuery(sql);
+		String author = "guru";// args[0];
+		String sql = "select price from books where author = ?";
+		PreparedStatement pst = con.prepareStatement(sql);
+		pst.setString(1, author);
+		rs = pst.executeQuery();
+		int sum = 0;
 		while (rs.next()) {
-			System.out.println("-------------------------");
-			System.out.println("Emp ID : " + rs.getInt(1));
-			System.out.println("Emp Name : " + rs.getString(2));
-			System.out.println("Dept : " + rs.getString(3));
-			System.out.println("Adress : " + rs.getString(4));
-
+			sum += rs.getInt(1);
 		}
+		System.out.println("Total sum of books : " + sum);
 	}
 
 }
