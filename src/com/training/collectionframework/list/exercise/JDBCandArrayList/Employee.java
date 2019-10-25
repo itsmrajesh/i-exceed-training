@@ -1,4 +1,4 @@
-package com.training.collectionframework.map.exercise.jdbcandhashmap;
+package com.training.collectionframework.list.exercise.JDBCandArrayList;
 
 public class Employee {
 	private int empID;

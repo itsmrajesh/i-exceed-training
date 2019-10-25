@@ -1,10 +1,7 @@
-package com.training.collectionframework.map.exercise.jdbcandhashmap;
+package com.training.collectionframework.list.exercise.JDBCandArrayList;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Set;
 
 public class GetDataFromDB {
 
