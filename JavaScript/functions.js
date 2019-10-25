@@ -14,5 +14,5 @@ function square(n){
     return n*n;
 }
 
-console.log(square(36)); // output should be 25
+console.log(square(5)); // output should be 25
 
