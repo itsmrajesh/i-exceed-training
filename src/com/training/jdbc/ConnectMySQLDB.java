@@ -11,7 +11,7 @@ public class ConnectMySQLDB {
 	static {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-		} catch (Exception e) {
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 	}
@@ -29,14 +29,13 @@ public class ConnectMySQLDB {
 		ConnectMySQLDB db = new ConnectMySQLDB();
 		Connection con = db.getConnection();
 		String author = "guru";// args[0];
-		String sql = "select price from books where author = ?";
+		String sql = "select sum(price) from books where author = ?";
 		PreparedStatement pst = con.prepareStatement(sql);
 		pst.setString(1, author);
 		rs = pst.executeQuery();
 		int sum = 0;
-		while (rs.next()) {
-			sum += rs.getInt(1);
-		}
+		rs.next();
+		sum = rs.getInt(1);
 		System.out.println("Total sum of books : " + sum);
 	}
 

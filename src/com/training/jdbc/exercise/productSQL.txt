@@ -1,0 +1,8 @@
+create table products (pid int , pname varchar(20), price double(10,2),category varchar(10));
+insert into products values(101,'laptop',50000.50,'Electronic');
+insert into products values(102,'mobile',5000.50,'Electronic');
+insert into products values(103,'dryer',4500.50,'Electronic');
+insert into products values(104,'Samsung-Notepad',12000.50,'Electronic');
+insert into products values(105,'heater',500.50,'Electronic');
+insert into products values(105,'heater',500.50,'Electronic');
+select (sum(price)-(max(price)+min(price)))/(count(pname)-2) from products;
