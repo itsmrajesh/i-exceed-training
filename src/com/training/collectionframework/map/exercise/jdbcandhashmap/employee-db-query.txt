@@ -1,0 +1,9 @@
+create table employee(id int,empname varchar(50),sal double(8,2));
+insert into employee values(101,"Rajesh",45000.24);
+insert into employee values(102,"Rahul",35000.24);
+insert into employee values(103,"Rakesh",25000.24);
+insert into employee values(104,"Ramesh",41004.24);
+insert into employee values(105,"Rakul",30000.24);
+insert into employee values(106,"Ramu",4400.24);
+
+select * from employee;
