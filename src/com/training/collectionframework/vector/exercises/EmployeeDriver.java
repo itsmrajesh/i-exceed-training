@@ -86,7 +86,6 @@ public class EmployeeDriver {
 
 	private static double findEmpTotalSalary(Vector<Employee> vector) {
 		double totalSal = 0.0;
-
 		for (int i = 0; i < vector.size(); i++) {
 			totalSal += vector.get(i).getSal();
 		}
