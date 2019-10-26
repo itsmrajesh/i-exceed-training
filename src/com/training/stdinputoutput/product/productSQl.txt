@@ -1,0 +1,1 @@
+create table products2 (productName varchar(30),price double(8,2),category varchar(50));
