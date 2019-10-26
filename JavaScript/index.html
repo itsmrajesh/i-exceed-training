@@ -7,6 +7,23 @@
     <title>welcome</title>
 </head>
 <body>
-    <script src="functions.js"></script>
+    <h1>Hello world</h1>
+    <script>
+        var n=5
+        for(var i=0;i<n;i++){
+            for(var j=0;j<=i;j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        var arr = [10, 20, 30];
+        var sum=0;
+        for(var i=0;i<arr.length;i++){
+            sum += arr[i];
+        }
+        document.write("Given array :"+arr+" ");
+        document.write("There sum is : "+sum);
+        alert("Array sum is : "+sum);
+    </script>
 </body>
 </html>
