@@ -15,19 +15,19 @@ public class Employee {
 		this.empName = empName;
 		this.location = location;
 		this.basicSal = sal;
-		init(sal);
+		init(sal); // calculate tax , bonus and net salary
 	}
 
 	private void init(double sal) {
 		if (sal <= 50_000) {
-			this.bonus = sal * 0.2;
+			this.bonus = sal * 0.2;  // bonus = 20%
 		} else if (sal > 50_000 && sal <= 100_000) {
-			this.bonus = sal * 0.1;
-			this.tax = sal * 0.1;
+			this.bonus = sal * 0.1; // bonus = 10%
+			this.tax = sal * 0.1;  // tax = 10%
 		} else {
-			this.tax = sal * 0.2;
+			this.tax = sal * 0.2;  // tax = 20%
 		}
-		this.netSal = this.basicSal + this.bonus - this.tax;
+		this.netSal = this.basicSal + this.bonus - this.tax; // calculating net salary
 	}
 
 	public int getEmpID() {
