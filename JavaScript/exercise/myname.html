@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Name</title>
+</head>
+
+<body>
+    <h1>Name Exercise </h1>
+    <h1>Enter your name and how times you want to print your name</h1>
+    Name: <input type="text" id="name"> <br>
+    Times: <input type="text" id="times"> <br>
+    <input type="button" onclick="printName()" value="Print My Name">
+    <script>
+        function printName() {
+            var name = document.getElementById('name').value;
+            var times = parseInt(document.getElementById('times').value);
+            for (i = 0; i < times; i++) {
+                document.writeln(name + " <br>");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
