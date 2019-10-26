@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Change Colors</title>
+</head>
+<body>
+    <h1 id="h1">Happy Diwali</h1>
+    <input type="text" id='color'>
+    <input type="button" onclick="change()" value="Change color">
+    <script>
+    function change() {
+           var x=document.getElementById('h1')
+           x.innerHTML='Happy Holi'
+           var y=document.getElementById('color').value
+           x.style.color=y
+       }
+
+    
+    </script>
+</body>
+</html>

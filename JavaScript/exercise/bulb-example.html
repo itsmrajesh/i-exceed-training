@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bulb Example</title>
+</head>
+
+<body>
+    <h1>Bulb Example</h1>
+    <h2>use ON/OFF button to swtich ON or OFF</h2>
+    <input type="button" value="ON/OFF" onclick="onoff()"> <br>
+    <img src="bulboff.jpg" alt="" id='bulb' width="500px"> <br>
+
+
+    <script>
+        function onoff() {
+            state = document.getElementById('bulb').src;
+            if (state.includes('bulbon')) {
+                document.getElementById('bulb').src = 'bulboff.jpg';
+            } else {
+                document.getElementById('bulb').src = 'bulbon.jpg';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
