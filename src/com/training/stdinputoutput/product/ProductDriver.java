@@ -17,7 +17,7 @@ public class ProductDriver {
 		String category;
 		Product product;
 		ArrayList<Product> list = new ArrayList<Product>();
-		while (c < 2) {
+		while (c < 3) {
 			System.out.println("Count : " + (c + 1));
 			System.out.println("Enter product name : ");
 			name = br.readLine();
@@ -37,8 +37,11 @@ public class ProductDriver {
 
 	private static void insertIntoDB(ArrayList<Product> list) throws SQLException {
 		ConnectDB db = new ConnectDB();
+		Product product;
+		System.out.println("Insering data from ArrayList to DB");
 		for (int i = 0; i < list.size(); i++) {
-			db.insert(list.get(i));
+			product = list.get(i);
+			db.insert(product);
 		}
 	}
 
@@ -52,13 +55,13 @@ public class ProductDriver {
 	}
 
 	private static void findCostliestProduct(ArrayList<Product> list) {
-		double price = 0.0, p = 0.0;
+		double price = 0.0, maxprice = 0.0;
 		Product product, costliestProduct = list.get(0);
 		for (int i = 1; i < list.size(); i++) {
 			product = list.get(i);
-			p = product.getPrice();
-			if (p > price) {
-				p = price;
+			price = product.getPrice();
+			if (price > maxprice) {
+				maxprice = price;
 				costliestProduct = product;
 			}
 		}
@@ -67,13 +70,13 @@ public class ProductDriver {
 	}
 
 	private static void findCheapestProduct(ArrayList<Product> list) {
-		double price = list.get(0).getPrice(), p = 0.0;
+		double price = 0.0, minPrice = list.get(0).getPrice();
 		Product product, cheapestProduct = list.get(0);
 		for (int i = 1; i < list.size(); i++) {
 			product = list.get(i);
-			p = product.getPrice();
-			if (p < price) {
-				p = price;
+			price = product.getPrice();
+			if (minPrice > price) {
+				minPrice = price;
 				cheapestProduct = product;
 			}
 		}
