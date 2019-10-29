@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employee MGMT </title>
+    <script>
+        var employees = [];
+        function addEmployee() {
+            var name = document.getElementById('t1').value;
+            var salary = document.getElementById('t2').value;
+            if (name != '' && salary != '') {
+                obj = { name: name, salary: parseFloat(salary) };
+                //obj.name = product;
+                //obj.price = parseFloat(price);
+                employees.push(obj);
+                document.getElementById('t1').value = '';
+                document.getElementById('t2').value = '';
+                alert(obj.name + " added successfully");
+            } else {
+                alert("Invalid employee name or employee salary ");
+            }
+        }
+
+        function showEmployees() {
+            var msg = '';
+            if (employees.length > 0) {
+                for (i = 0; i < employees.length; i++) {
+                    msg += ("employee name : " + employees[i]['name'] + " Salary :  " + employees[i]['salary'] + "\n");
+                }
+            } else {
+                alert("employee list is empty ")
+            }
+            alert(msg);
+
+        }
+
+        function showEmployeesCount() {
+            if (employees.length > 0) {
+                alert("Total count of employees : " + employees.length)
+            } else {
+                alert("employees list is empty ")
+            }
+        }
+
+        function clearData() {
+            employees = [];
+            alert("successfully list is cleared ")
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Welcome to Employee MGMT Application</h1>
+    Enter name : <input type="text" id="t1"> <br>
+    Enter Salary : <input type="text" id="t2"> <br>
+    <input type="button" value="Add Employee " onclick="addEmployee()">
+    <input type="button" value="Show all employees " onclick="showEmployees()">
+    <input type="button" value="Show Count of all employees " onclick="showEmployeesCount()">
+    <input type="button" value="Clear all employees from list " onclick="clearData()">
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prompt</title>
+    <script>
+        function f1() {
+            name = prompt("Your name : ", "");
+            age = prompt("your age :", "");
+            age = parseInt(age)
+            document.write("Hello " + name);
+            if (age < 18) {
+                document.write(", Under age to join mission ");
+            } else {
+                document.write(", Welcome aboard ");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Click me " onclick="f1()">
+</body>
+
+</html>

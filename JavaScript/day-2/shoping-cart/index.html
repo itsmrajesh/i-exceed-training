@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shoping Cart </title>
+    <script>
+        var products = [];
+        function addProduct() {
+            var product = document.getElementById('t1').value;
+            var price = document.getElementById('t2').value;
+            if (product != '' && price != '') {
+                obj = { name: product, price: parseFloat(price) };
+                //obj.name = product;
+                //obj.price = parseFloat(price);
+                products.push(obj);
+                document.getElementById('t1').value = '';
+                document.getElementById('t2').value = '';
+                alert(obj.name + " added successfully");
+            } else {
+                alert("Invalid product name or product price ");
+            }
+        }
+
+        function showProducts() {
+            var msg = '';
+            if (products.length > 0) {
+                for (i = 0; i < products.length; i++) {
+                    msg += ("Product name : " + products[i]['name'] + " price :  " + products[i]['price'] + "\n");
+                }
+            } else {
+                alert("Products list is empty ")
+            }
+            alert(msg);
+
+        }
+
+        function showProductsCount() {
+            if (products.length > 0) {
+                alert("Total count of products : " + products.length)
+            } else {
+                alert("Products list is empty ")
+            }
+        }
+
+        function clearCart() {
+            products = [];
+            alert("successfully cart is cleared ")
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Welcome to shopping cart Application</h1>
+    Enter product name : <input type="text" id="t1"> <br>
+    Enter product Price : <input type="text" id="t2"> <br>
+    <input type="button" value="Add Product to cart " onclick="addProduct()">
+    <input type="button" value="Show all products " onclick="showProducts()">
+    <input type="button" value="Show Count of all products " onclick="showProductsCount()">
+    <input type="button" value="Clear all products from cart " onclick="clearCart()">
+
+</body>
+
+</html>

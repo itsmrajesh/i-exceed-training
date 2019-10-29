@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Confirm Demo</title>
+    <script>
+
+        function conf() {
+            var status = confirm("Do you like to continue ");
+            if (status) {
+                window.location = "message.html";
+            } else {
+                document.write("Cancelled")
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Confirm Demo</h1>
+    <h3>Click below button</h3>
+    <input type="button" value="OK" onclick="conf()">
+</body>
+
+</html>

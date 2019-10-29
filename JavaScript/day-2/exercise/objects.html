@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objects</title>
+</head>
+
+<body>
+    <script>
+        function emp() {
+            var obj = { empID: 101, empName: 'Rajesh', empSal: 123456.20 };
+            alert("Press OK to display Employee information")
+            document.write("Emp ID : "+obj.empID)
+            document.write(" Emp Name : "+obj.empName)
+            document.write(" Emp Sal : "+obj.empSal)
+            document.write("<br>")
+            for(p in obj){
+                document.write(p) // displays properties 
+                document.write(obj[p]+ "<br>") // displays data in prorperties
+            }
+
+            delete obj.empSal
+        }
+    </script>
+
+    <input type="button" value="Show Emp Info " onclick="emp()">
+</body>
+
+</html>

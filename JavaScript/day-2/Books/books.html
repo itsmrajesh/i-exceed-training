@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book Cart </title>
+    <script>
+        var books = [];
+        function addBook() {
+            var name = document.getElementById('t1').value;
+            var price = document.getElementById('t2').value;
+            if (name != '' && price != '') {
+                obj = { name: name, price: parseFloat(price) };
+                //obj.name = product;
+                //obj.price = parseFloat(price);
+                books.push(obj);
+                document.getElementById('t1').value = '';
+                document.getElementById('t2').value = '';
+                alert(obj.name + " added successfully");
+            } else {
+                alert("Invalid input ");
+            }
+        }
+
+        function showBooks() {
+            var msg = '';
+            if (books.length > 0) {
+                for (i = 0; i < books.length; i++) {
+                    msg += ("Book name : " + books[i]['name'] + " price :  " + books[i]['price'] + "\n");
+                }
+                alert(msg);
+            } else {
+                alert("Book list is empty ")
+            }
+        }
+
+        function showBooksCount() {
+            if (books.length > 0) {
+                alert("Total count of books : " + books.length)
+            } else {
+                alert("books list is empty ")
+            }
+        }
+
+        function clearData() {
+            books = [];
+            alert("successfully list is cleared ")
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Welcome to Book MGMT Application</h1>
+    Enter book name : <input type="text" id="t1"> <br>
+    Enter book price : <input type="text" id="t2"> <br>
+    <input type="button" value="Add Book " onclick="addBook()">
+    <input type="button" value="Show all books " onclick="showBooks()">
+    <input type="button" value="Show Count of all books " onclick="showBooksCount()">
+    <input type="button" value="Clear all books from list " onclick="clearData()">
+
+</body>
+
+</html>
