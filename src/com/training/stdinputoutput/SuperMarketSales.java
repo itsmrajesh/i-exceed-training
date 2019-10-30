@@ -14,12 +14,13 @@ public class SuperMarketSales {
 		int count = 0, noOfProducts = 10;
 		double[] sales = new double[noOfProducts];
 		System.out.println("Welcome manager :");
-		while (count < noOfProducts) {
-			System.out.println("Enter sale " + (count + 1) + " : ");
+		for (int i = 0; i < noOfProducts; i++) {
+			System.out.println("Enter sale " + (i + 1) + " : ");
 			sale = Double.parseDouble(br.readLine());
-			sales[count++] = sale;
+			sales[i] = sale;
 			totalSale += sale;
 		}
+
 		Arrays.sort(sales);
 		System.out.println("Total Sale for " + noOfProducts + " days : " + totalSale);
 		double lowestSale = getLowestSale(sales);
