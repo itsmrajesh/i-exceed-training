@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Manuplations</title>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>DOM Manuplations</h1>
+    <button id="btn1">Append</button>
+    <button id="btn2">After</button>
+    <button id="btn3">Before</button>
+    <button id="btn4">Prepend</button>
+    <button id="btn6">Empty</button>
+    <button id="btn5">Remove</button>
+    <br><br>
+    <div id="d">
+        <p id="moto">Hello Moto</p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#moto").append(" by Moto");
+            });
+
+            $("#btn2").click(function () {
+                $("#moto").after("Moto Love");
+            });
+
+            $("#btn3").click(function () {
+                $("#moto").before("My Moto");
+            });
+
+            $("#btn4").click(function () {
+                $("#moto").prepend("Moto is love... ");
+            });
+
+            $("#btn5").click(function () {
+                $("div").remove();
+            });
+
+            $("#btn6").click(function () {
+                $("div").empty();
+            });
+        });
+    </script>
+</body>
+
+</html>
