@@ -9,6 +9,9 @@
 
 <body>
     <h1 class="myHeader">This is just my header</h1>
+    <h1 class="myHeader">is just my header</h1>
+    <h1 class="myHeader">This </h1>
+    <h1 class="myHeader">Ho</h1>
     <ol id="daysOfWeek">
         <li>Monday</li>
         <li>Tuesday</li>
@@ -17,13 +20,21 @@
         <li>Friday</li>
     </ol>
     <p class="myHeader">This is just my paragraph</p>
-    <script>f1()</script>
+    
     <script>
         function f1() {
             var element = document.getElementsByClassName('myHeader');
             document.write('node type is ' + element[0].nodeType + "<br>");
             document.write('node name is ' + element[0].nodeName);
+
+            // element.array.forEach(element => {
+            //     alert(element.value);
+            // });
+
+            alert(element[1].value);
         }
+
+        f1();
     </script>
 </body>
 

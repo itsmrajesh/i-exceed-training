@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table Demo</title>
+    <style>
+        .people {
+            color: red;
+        }
+    </style>
+    <script src="R:\iexceed2019\CoreJava\JavaScript\jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".table tr:odd").addClass("people");
+        });
+    </script>
+</head>
+
+<body>
+
+
+    <table class="table" border="2px">
+        <th>Name</th>
+        <th>Place</th>
+        <tr>
+            <td>Rajesh</td>
+            <td>Bangalore</td>
+        </tr>
+        <tr>
+            <td>Mrudulla</td>
+            <td>Bangalore</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Chennai</td>
+        </tr>
+        <tr>
+            <td>Achal</td>
+            <td>CB-pur</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

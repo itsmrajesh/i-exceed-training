@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .tech{
+            list-style-type: square;
+        }
+        .motoStyle{
+            color: blueviolet;
+        }
+    </style>
+    <script src="R:\iexceed2019\CoreJava\JavaScript\jquery.js"></script>
+
+    <script>
+        $(document).ready(function () { 
+                $(".pl").addClass("tech");
+                $("h1:not(.moto)").addClass("motoStyle");
+        });
+    </script>
+</head>
+
+<body>
+    <ul class="pl">
+        <li>Python</li>
+        <li>C</li>
+        <li>Java</li>
+        <ul>
+            <li>Spring Boot</li>
+            <li>Servlets</li>
+            <li>Spring Security</li>
+        </ul>
+    </ul>
+
+    <h1 class="moto1">Hello Moto</h1>
+    <h1 class="moto1">Hello Moto</h1>
+    <h1 class="moto">Hello Moto</h1>
+    <h1 class="moto">Hello Moto</h1>
+    <h1 class="moto">Hello Moto</h1>
+    <h1 class="moto">Hello Moto</h1>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Focus Demo</title>
+    <style>
+        .focus {
+            color: red;
+        }
+    </style>
+    <script src="R:\iexceed2019\CoreJava\JavaScript\jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#loc").focus(function () {
+                $(this).val("Ex: Bangalore");
+            })
+
+
+            $("#loc").blur(function () {
+                $(this).val("");
+            })
+
+            $("#name").focus(function () {
+                $(this).val("Ex: John");
+            })
+
+            $("#name").blur(function () {
+                $(this).val("");
+            })
+        });
+    </script>
+</head>
+
+<body>
+    Name: <input type="text" name="" id="name"> <br> <br>
+    Location : <input type="text" name="" id="loc">
+
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="R:\iexceed2019\CoreJava\JavaScript\jquery.js"></script>
+    <script>
+        var font = 0;
+        function init() {
+            font = parseInt($("#h1").css("font-size"));
+            $("#inc").click(function () {
+                font++;
+                $("#h1").css("font-size", font);
+            });
+
+            $("#dec").click(function () {
+                font--;
+                
+                $("#h1").css("font-size", font);
+            });
+
+            $("#start").click(function () {
+                setInterval()
+            });
+
+        }
+
+        $(document).ready(init);
+    </script>
+</head>
+
+<body>
+    <h1 id="h1">Hello World</h1>
+    <button id="inc">Increase</button> <br> <br>
+    <button id="dec">Decrease</button> <br><br>
+
+    <button id="start">Start Timer</button>
+</body>
+
+</html>
